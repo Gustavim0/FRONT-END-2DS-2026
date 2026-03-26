@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,113 @@
     <style>
         .navbar {
             background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
         }
         .logo {
-            color: aliceblue;
-            font: 200px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
         }
-   
+
+        .nav-links{
+
+          list-style: none;
+          display: flex;
+          gap: 20px;
+          margin: 0px;
+          padding: 0px;
+
+        }
+
+        .nav-links a {
+
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+
+        }
+
+        .hamburguer{
+
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+
+        }
+        
+        @media screen and (max-width: 768px) {
+            
+        .hamburguer{
+            display: block;
+        }
+
+        .nav-links{
+
+         display: none;
+         flex-direction: column;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         width: 100%;
+         background-color: #333;
+         text-align: center;
+         padding: 20px 0;
+        }
+
+        .nav-links.active {
+             
+            display: flex;
+          }
+         }
+
     </style>
 
 </head>
 <body>
 
     <nav class="navbar">
-        
         <div class="logo">Meu site</div>
-        
-        <!-- Botao hamburguer -->
-        <button class="hambuerguer" id="hamburguer-btn">
-            &#9776; <!-- Simbolo do icone de menu--> 
+
+        <!-- Botão Hamburguer para responsividade -->
+        <button class="hamburguer" id="hamburguer-btn">
+            &#9776; <!-- Símbolo do ícone de menu -->
         </button>
-   
-        <!-- Lista de itens do menu-->
+
+        <!-- Lista de itens do menu -->
         <ul class="nav-links" id="nav-links">
             <li>
-                <a href="">Inicio</a>
-                <a href="">Sobre</a>
-                <a href="">Serviços</a>
-                <a href="">Contato</a>
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
             </li>
         </ul>
     </nav>
-
-    <div style="padding 20 px;">
-        <h1>Conteudo de pagina</h1>
+    
+    <div style="padding: 20px;">
+        <h1>Conteúdo da página</h1>
+        <p>Redimensione a janela do navegador para ver o menu mudar.</p>
     </div>
+
+    <a href="" style="text-decoration: none;" ></a>
+    <script>
+
+       const hamburguerBtn = document.getElementById('hamburguer-btn');
+       const navLinks = document.getElementById('nav-links');
+
+       hamburguerBtn.addEventListener('click',  => {
+
+      
+
+        })
+
+    </script>
 
 </body>
 </html>
