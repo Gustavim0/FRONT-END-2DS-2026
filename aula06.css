@@ -1,0 +1,21 @@
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(5px);
+}
